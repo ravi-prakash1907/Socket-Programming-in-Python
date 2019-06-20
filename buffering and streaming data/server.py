@@ -1,9 +1,9 @@
-#  i.e. sending/reciving data without termination the connection
+#  i.e. sending/receiving data without termination the connection
 
 import socket
 import time
 
-#using HEADER can resolve the problem of how long (i tsize) the
+#using HEADER can resolve the problem of how long (in size) the message is sent/received
 
 HEADERSIZE = 10
 
@@ -16,7 +16,7 @@ while True:
     print(f"Connection to {address} has been esteblished!")
 
     msg = "Welcome to the server!"
-    msg = f'{len(msg):<{HEADERSIZE}}' + msg    # 10 is the header len
+    msg = f'{len(msg):<{HEADERSIZE}}' + msg
     # <{HEADERSIZE}  ------------> '<' is for left allign.. can be also   '>' or '^'
 
     clientSocket.send(bytes(msg, "utf-8"))

@@ -10,7 +10,7 @@ while True:
     fullMsg = ''
     newMsg = True
     while True:
-        msg = s.recv(16)      #it's a buffer of 1024bytes how many size of data we want to accept once
+        msg = s.recv(16)
         if newMsg:
             print(f"New msg length: {msg[:HEADERSIZE]}")
             msglen = int(msg[:HEADERSIZE])
