@@ -1,6 +1,7 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# AF_INET refers to the address family ipv4. The SOCK_STREAM means connection oriented TCP protocol. 
 s.bind((socket.gethostname(), 1234))
 s.listen(5)
 
